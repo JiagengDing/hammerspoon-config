@@ -118,10 +118,11 @@ hotkey.bind(
 local key2App = {
 		a = "Alacritty", --a for alacritty
     -- b = "Google Chrome", -- b for browser
-		b = "Safari", -- b for safari
+		r = "Safari", -- b for safari
+		b = "firefox",
     c = "Messages", --vscode
     d = "GoldenDict", -- d for dict
-    e = "Code", -- e for editor
+    -- e = "Code", -- e for editor
     f = "Finder",
     -- g used --center babe
     -- h = '',
@@ -133,13 +134,14 @@ local key2App = {
     n = 'NetNewsWires',
     -- o used --max babe
     p = "PDFGuru",
-    -- q = "QSpace",
+		q = "QQ",
     r = 'Reminders',
     s = 'System Preferences',
     t = "iTerm2", -- t for term
     -- u
     -- v = 'Dictionary',
     -- w = 'TaskPaper',
+		w = "WeChat",
     -- x = 'Sublime Text',
     -- y = 'Dictionary',
     -- z = 'iTerm2'
@@ -208,4 +210,4 @@ hotkey.bind(
 
 -- alt + R reload
 hotkey.bind("alt", "R", function() hs.reload() end)
-alert.show("🤓.🛠.🤓")
+alert.show("🤓.🛠.🤓, config succesfully")
