@@ -24,6 +24,7 @@ local hyper = {"ctrl", "alt", "cmd", "shift"}
 
 require "pomo"
 require "slowq"
+-- require "windows-bindings"
 
 hs.hotkey.bind(hyper, '9', '🤓 > POMO ON', function() pom_enable() end)
 hs.hotkey.bind(hyper, '0', '😌 > POMO OFF', function() pom_disable() end)
@@ -259,8 +260,10 @@ function updateFocusAppInputMethod(appObject)
 
     if ime == 'English' then
         English()
+				alert.show("Colemak")
     else
         Chinese()
+				alert.show("🇨🇳 双 拼 🇨🇳")
     end
 end
 
@@ -285,6 +288,7 @@ end)
 function applicationWatcher(appName, eventType, appObject)
     if eventType == hs.application.watcher.activated then
         updateFocusAppInputMethod(appObject)
+				-- alert.show(hs.keycodes.currentLayout())
     end
 end
 
@@ -294,3 +298,19 @@ appWatcher:start()
 -- alt + R reload
 hotkey.bind("alt", "R", function() hs.reload() end)
 alert.show("🤓.🛠.🤓, config succesfully")
+
+-- auto reload config
+
+function reloadConfig(files)
+    doReload = false
+    for _,file in pairs(files) do
+        if file:sub(-4) == ".lua" then
+            doReload = true
+        end
+    end
+    if doReload then
+        hs.reload()
+    end
+end
+myWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
+-- hs.alert.show("Config loaded")
