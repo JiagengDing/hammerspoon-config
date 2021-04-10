@@ -222,7 +222,7 @@ local function Chinese()
 end
 
 local function English()
-    -- ABC
+    -- Colemak
     hs.keycodes.currentSourceID("com.apple.keylayout.Colemak")
 end
 
@@ -235,7 +235,7 @@ local app2Ime = {
 		{'/Applications/Alacritty.app', 'English'},
     {'/Applications/Visual Studio Code.app', 'English'},
     {'/Applications/MacVim.app', 'English'},
-    {'/Applications/Finder.app', 'English'},
+    {'/System/Library/CoreServices/Finder.app', 'English'},
 --Chinese
     {'/Applications/PyCharm.app', 'English'},
     {'/Applications/WeChat.app', 'Chinese'},
