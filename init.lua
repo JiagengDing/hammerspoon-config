@@ -1,4 +1,11 @@
 require("keyboard") -- Load Hammerspoon bits from https://github.com/jasonrudolph/keyboard
+-- require("weather")
+require("pomo")
+require("slowq")
+
+speaker = hs.speech.new()
+speaker:speak("Hammerspoon is online")
+hs.notify.new({title="Hammerspoon launch", informativeText="Have a nice day!"}):send()
 
 local application = require "hs.application"
 local window = require "hs.window"
@@ -22,8 +29,6 @@ local hyper = {"ctrl", "alt", "cmd", "shift"}
 
 -- hs.loadSpoon("TimeFlow") -- time elapsed
 
-require "pomo"
-require "slowq"
 -- require "windows-bindings"
 
 hs.hotkey.bind(hyper, '9', '🤓 > POMO ON', function() pom_enable() end)
@@ -35,7 +40,7 @@ window.animationDuration = 0
 -- window hints
 hints.fontName = "Avenir"
 hints.fontSize = 25
-hints.hintChars = {"A", "S", "D", "F", "J", "K", "L", "Q", "W"}
+hints.hintChars = {"A", "R", "S", "T", "N", "E", "I", "O"}
 hints.iconAlpha = 1.0
 hints.showTitleThresh = 0
 
