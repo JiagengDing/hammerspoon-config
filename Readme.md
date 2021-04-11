@@ -6,10 +6,26 @@ clone to `~/.hammerspoon/`
 
 ## Function
 
-- apps quick start
-- auto change input method(colemak and 双拼)
+### apps quick start
+
+### windows mangement
+
+- `ctrl`+`s`
+
+### input method(colemak and 双拼)
+
+- auto change
 - show input method
-- auto reroad config
+
+### reroad config
+
+- `alt`+`r`
+- when save the config
+
+### use `fn`+`u`/`e`/`n`/`i` to move cursor
+
+- `fn`+`u`/`e`/`n`/`i` to move cursor
+- 'fn'+'l'/`k` to scroll up/down
 
 ## Reference
 

@@ -16,15 +16,18 @@ require("slowq")
 require("auto_input")
 require("reload")
 
-speaker = hs.speech.new()
-speaker:speak("Hammerspoon is online")
-hs.notify.new({title="Hammerspoon launch", informativeText="Have a nice day!"}):send()
-
-
--- hs.loadSpoon("HCalendar")
+-------------
+--Spoons
+-------------
+hs.loadSpoon("HCalendar")
+hotkey.bind('alt', '5', function() spoon.HCalendar:start() end)
 
 hs.loadSpoon("AClock")
 hotkey.bind('alt', '6', function() spoon.AClock:toggleShow() end)
+
+hs.loadSpoon("FnMate")
+
+hs.loadSpoon("MenubarFlag")
 
 -- hs.loadSpoon("WinWin")
 
@@ -33,6 +36,14 @@ hotkey.bind('alt', '6', function() spoon.AClock:toggleShow() end)
 -- hs.loadSpoon("TimeFlow") -- time elapsed
 
 -- require "windows-bindings"
+
+
+------------------
+-- have a nice day
+------------------
+speaker = hs.speech.new()
+speaker:speak("Hammerspoon is online")
+hs.notify.new({title="Hammerspoon launch", informativeText="Have a nice day!"}):send()
 
 hs.hotkey.bind(hyper, '9', '🤓 > POMO ON', function() pom_enable() end)
 hs.hotkey.bind(hyper, '0', '😌 > POMO OFF', function() pom_disable() end)
