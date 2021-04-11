@@ -15,19 +15,32 @@ require("pomo")
 require("slowq")
 require("auto_input")
 require("reload")
+require("vim-binding")
 
 -------------
 --Spoons
 -------------
 hs.loadSpoon("HCalendar")
-hotkey.bind('alt', '5', function() spoon.HCalendar:start() end)
+hotkey.bind('alt', '1', function() spoon.HCalendar:start() end)
+hotkey.bind('alt', '2', function() spoon.HCalendar:stop() end)
 
 hs.loadSpoon("AClock")
-hotkey.bind('alt', '6', function() spoon.AClock:toggleShow() end)
+hotkey.bind('alt', '3', function() spoon.AClock:toggleShow() end)
 
 hs.loadSpoon("FnMate")
 
 hs.loadSpoon("MenubarFlag")
+
+hs.loadSpoon("PopupTranslateSelection")
+hotkey.bind('alt', '4', function() spoon.PopupTranslateSelection:translateSelectionPopup() end)
+-- {
+     -- translate_to_en = { { "ctrl", "alt", "cmd" }, "e" },
+     -- translate_to_de = { { "ctrl", "alt", "cmd" }, "d" },
+     -- translate_to_es = { { "ctrl", "alt", "cmd" }, "s" },
+     -- translate_de_en = { { "shift", "ctrl", "alt", "cmd" }, "e" },
+     -- translate_en_de = { { "shift", "ctrl", "alt", "cmd" }, "d" },
+ -- }
+
 
 -- hs.loadSpoon("WinWin")
 

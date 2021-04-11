@@ -16,19 +16,19 @@ obj.license = "MIT - https://opensource.org/licenses/MIT"
 
 function obj:init()
     local function catcher(event)
-        if event:getFlags()['fn'] and event:getCharacters() == "n" then
-            return true, {hs.eventtap.event.newKeyEvent({}, "left", true)}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "i" then
-            return true, {hs.eventtap.event.newKeyEvent({}, "right", true)}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "e" then
-            return true, {hs.eventtap.event.newKeyEvent({}, "down", true)}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "u" then
-            return true, {hs.eventtap.event.newKeyEvent({}, "up", true)}
+        -- if event:getFlags()['fn'] and event:getCharacters() == "n" then
+        --     return true, {hs.eventtap.event.newKeyEvent({}, "left", true)}
+        -- elseif event:getFlags()['fn'] and event:getCharacters() == "i" then
+        --     return true, {hs.eventtap.event.newKeyEvent({}, "right", true)}
+        -- elseif event:getFlags()['fn'] and event:getCharacters() == "e" then
+        --     return true, {hs.eventtap.event.newKeyEvent({}, "down", true)}
+        -- elseif event:getFlags()['fn'] and event:getCharacters() == "u" then
+        --     return true, {hs.eventtap.event.newKeyEvent({}, "up", true)}
         -- elseif event:getFlags()['fn'] and event:getCharacters() == "y" then
         --     return true, {hs.eventtap.event.newScrollEvent({3, 0}, {}, "line")}
         -- elseif event:getFlags()['fn'] and event:getCharacters() == "o" then
         --     return true, {hs.eventtap.event.newScrollEvent({-3, 0}, {}, "line")}
-        elseif event:getFlags()['fn'] and event:getCharacters() == "l" then
+        if event:getFlags()['fn'] and event:getCharacters() == "l" then
             return true, {hs.eventtap.event.newScrollEvent({0, 3}, {}, "line")}
         elseif event:getFlags()['fn'] and event:getCharacters() == "k" then
             return true, {hs.eventtap.event.newScrollEvent({0, -3}, {}, "line")}

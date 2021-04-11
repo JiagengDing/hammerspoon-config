@@ -8,7 +8,7 @@ clone to `~/.hammerspoon/`
 
 ### apps quick start
 
-### windows mangement
+### window mangement
 
 - `ctrl`+`s`
 
@@ -17,7 +17,7 @@ clone to `~/.hammerspoon/`
 - auto change
 - show input method
 
-### reroad config
+### reload config
 
 - `alt`+`r`
 - when save the config
@@ -34,3 +34,5 @@ https://b23.tv/YEyvE5
 https://github.com/jasonrudolph/keyboard
 
 https://github.com/hansenz42/hammerspoon-auto-switch-input-method
+
+https://github.com/S1ngS1ng/HammerSpoon.git
