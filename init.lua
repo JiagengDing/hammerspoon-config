@@ -5,7 +5,6 @@ local alert = require "hs.alert"
 local grid = require "hs.grid"
 local hints = require "hs.hints"
 local applescript = require "hs.applescript"
-
 -- hyper
 local hyper = {"ctrl", "alt", "cmd", "shift"}
 
@@ -24,8 +23,8 @@ hs.notify.new({title="Hammerspoon launch", informativeText="Have a nice day!"}):
 
 -- hs.loadSpoon("HCalendar")
 
--- hs.loadSpoon("AClock")
--- hotkey.bind('alt', '6', function() spoon.AClock:toggleShow() end)
+hs.loadSpoon("AClock")
+hotkey.bind('alt', '6', function() spoon.AClock:toggleShow() end)
 
 -- hs.loadSpoon("WinWin")
 
