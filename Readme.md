@@ -1,31 +1,61 @@
 # HammerSpoon Cofiguration
 
-## Usage
+## Installation
 
-clone to `~/.hammerspoon/`
+```bash
+brew install hammerspoon --cask
+
+git clone https://github.com/JIagengDing/hammerspoon-config.git --depth=1 ~/.hammerspoon
+```
 
 ## Function
 
-### apps quick start
+1. apps quick start
 
-### window mangement
+- `hyper`+`a` for alacritty
+- `hyper`+`b` for brave-browser
+- `hyper`+`c` for messages
+- `hyper`+`f` for finder
+- `hyper`+`m` for spotify
+- `hyper`+`q` for QQ
+- `hyper`+`r` for safari
+- `hyper`+`s` for system preference
+- `hyper`+`t` for iterm2
+- `hyper`+`w` for wechat
+
+2. window mangement
 
 - `ctrl`+`s`
 
-### input method(colemak and 双拼)
+3. input method (colemak and 双拼)
 
 - auto change
 - show input method
 
-### reload config
+4. reload config
 
 - `alt`+`r`
 - when save the config
 
-### use `fn`+`u`/`e`/`n`/`i` to move cursor
+5. cursor movement
 
-- `fn`+`u`/`e`/`n`/`i` to move cursor
-- 'fn'+'l'/`k` to scroll up/down
+- `ctrl`+`u`/`e`/`n`/`i` to move cursor
+- `fn`+`l`/`k` to scroll up/down
+
+6. time
+
+- `alt`+`1` to open calendar
+- `alt`+`2` to close calendar
+- `alt`+`3` to display time
+
+7. translation
+
+- copy and press `alt`+`4`
+
+8. Pomodoro Technique
+
+- `alt`+`9` to start
+- `alt`+`0` to stop
 
 ## Reference
 

@@ -146,12 +146,13 @@ hotkey.bind(
 )
 
 
+----------------------------
+--apps hotkey
+----------------------------
 
--- this part is for open or focus app windows
 local key2App = {
 		a = "Alacritty", --a for alacritty
     -- b = "Google Chrome", -- b for browser
-		r = "Safari", -- b for safari
 		b = "Brave Browser",
     c = "Messages",
     -- d = "GoldenDict", -- d for dict
@@ -168,7 +169,8 @@ local key2App = {
     -- o used --max babe
     -- p = "skim",
 		q = "QQ",
-    r = 'Reminders',
+		r = "Safari", -- b for safari
+		-- r = 'Reminders',
     s = 'System Preferences',
     t = "iTerm2", -- t for term
     -- u
@@ -240,7 +242,3 @@ hotkey.bind(
         alert.show("🌜.🌏.🌛")
     end
 )
-
--- hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
---   hs.alert.show(hs.keycodes.currentSourceID())
--- end)
