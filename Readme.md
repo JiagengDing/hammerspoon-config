@@ -25,7 +25,10 @@ git clone https://github.com/JIagengDing/hammerspoon-config.git --depth=1 ~/.ham
 
 2. window mangement
 
-- `ctrl`+`s`
+- `ctrl`+`s` to open layout mode
+- `hyper`+`d` go middle
+- `hyper`+`h` go max
+- `hyper`+`o` go center
 
 3. input method (colemak and 双拼)
 

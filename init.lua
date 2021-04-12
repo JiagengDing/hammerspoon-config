@@ -33,13 +33,6 @@ hs.loadSpoon("MenubarFlag")
 
 hs.loadSpoon("PopupTranslateSelection")
 hotkey.bind('alt', '4', function() spoon.PopupTranslateSelection:translateSelectionPopup() end)
--- {
-     -- translate_to_en = { { "ctrl", "alt", "cmd" }, "e" },
-     -- translate_to_de = { { "ctrl", "alt", "cmd" }, "d" },
-     -- translate_to_es = { { "ctrl", "alt", "cmd" }, "s" },
-     -- translate_de_en = { { "shift", "ctrl", "alt", "cmd" }, "e" },
-     -- translate_en_de = { { "shift", "ctrl", "alt", "cmd" }, "d" },
- -- }
 
 
 -- hs.loadSpoon("WinWin")
@@ -116,14 +109,14 @@ hotkey.bind(
 )
 hotkey.bind(
     hyper,
-    "H",
+    "O",
     function()
         grid.set(window.focusedWindow(), gocenter)
     end
 )
 hotkey.bind(
     hyper,
-    "O",
+    "H",
     function()
         grid.set(window.focusedWindow(), gobig)
     end
