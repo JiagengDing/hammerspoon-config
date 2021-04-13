@@ -5,14 +5,25 @@
 local alert = require "hs.alert"
 local application = require "hs.application"
 
+----------------
+--This is your config
+----------------
+en = "com.apple.keylayout.Colemak"
+zh = "com.apple.inputmethod.SCIM.Shuangpin"
+en_ = "Colemak"
+zh_ = " 双 拼 "
+
+----------------------------
+----------------------------
+
 local function Chinese()
     -- shuangpin
-    hs.keycodes.currentSourceID("com.apple.inputmethod.SCIM.Shuangpin")
+    hs.keycodes.currentSourceID(zh)
 end
 
 local function English()
     -- Colemak
-    hs.keycodes.currentSourceID("com.apple.keylayout.Colemak")
+    hs.keycodes.currentSourceID(en)
 end
 
 -- app to expected ime config
@@ -24,9 +35,10 @@ local app2Ime = {
 		{'/Applications/Alacritty.app', 'English'},
     {'/Applications/Visual Studio Code.app', 'English'},
     {'/Applications/MacVim.app', 'English'},
+    {'/Applications/Safari.app', 'English'},
+    {'/Applications/PyCharm.app', 'English'},
     {'/System/Library/CoreServices/Finder.app', 'English'},
 --Chinese
-    {'/Applications/PyCharm.app', 'English'},
     {'/Applications/WeChat.app', 'Chinese'},
     {'/Applications/QQ.app', 'Chinese'},
     {'/Applications/Microsoft Word.app', 'Chinese'},
@@ -48,10 +60,10 @@ function updateFocusAppInputMethod(appObject)
 
     if ime == 'English' then
         English()
-				alert.show("Colemak")
+				alert.show(en_)
     else
         Chinese()
-				alert.show("🇨🇳 双 拼 🇨🇳")
+				alert.show(zh_)
     end
 end
 
@@ -71,12 +83,27 @@ hs.hotkey.bind({'ctrl', 'cmd'}, ".", function()
     ..hs.keycodes.currentSourceID())
 end)
 
+-----------------------------------
+--auto show input method when change source
+-----------------------------------
+function inputchange()
+		if hs.keycodes.currentSourceID() == en then
+			alert.show(en_)
+		end
+		if hs.keycodes.currentSourceID() == zh then
+			alert.show(zh_)
+		end
+end
+
+
 -- Handle cursor focus and application's screen manage.
 -- 窗口激活时自动切换输入法
 function applicationWatcher(appName, eventType, appObject)
     if eventType == hs.application.watcher.activated then
         updateFocusAppInputMethod(appObject)
 				-- alert.show(hs.keycodes.currentLayout())
+		else
+				hs.keycodes.inputSourceChanged(inputchange)
     end
 end
 

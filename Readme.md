@@ -33,7 +33,7 @@ git clone https://github.com/JIagengDing/hammerspoon-config.git --depth=1 ~/.ham
 3. input method (colemak and 双拼)
 
 - auto change
-- show input method
+- show input method when change it or open a new window
 
 4. reload config
 
