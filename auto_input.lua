@@ -89,8 +89,7 @@ end)
 function inputchange()
 		if hs.keycodes.currentSourceID() == en then
 			alert.show(en_)
-		end
-		if hs.keycodes.currentSourceID() == zh then
+		elseif hs.keycodes.currentSourceID() == zh then
 			alert.show(zh_)
 		end
 end
