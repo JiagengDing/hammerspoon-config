@@ -37,12 +37,16 @@ local app2Ime = {
     {'/Applications/MacVim.app', 'English'},
     {'/Applications/Safari.app', 'English'},
     {'/Applications/PyCharm.app', 'English'},
+    {'/Applications/Raycast.app', 'English'},
     {'/System/Library/CoreServices/Finder.app', 'English'},
 --Chinese
     {'/Applications/WeChat.app', 'Chinese'},
+    {'/Applications/MailMaster.app', 'Chinese'},
+    {'/Applications/Typora.app', 'Chinese'},
     {'/Applications/QQ.app', 'Chinese'},
     {'/Applications/Microsoft Word.app', 'Chinese'},
-    {'/Applications/Messages.app', 'Chinese'},
+    {'/System/Applications/Messages.app', 'Chinese'},
+    {'/System/Applications/Stickies.app', 'Chinese'},
 }
 
 function updateFocusAppInputMethod(appObject)
