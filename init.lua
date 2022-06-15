@@ -77,7 +77,7 @@ alert.defaultStyle.strokeColor = {white = 1, alpha = 0}
 alert.defaultStyle.fillColor = {white = 0.05, alpha = 0.75}
 alert.defaultStyle.radius = 5
 alert.defaultStyle.fadeOutDuration = 0.5
-alert.defaultStyle.textFont = "Fira Mono"
+alert.defaultStyle.textFont = "FiraCode Nerd Font"
 alert.defaultStyle.textSize = 20
 
 -- grid sized windows management
@@ -152,20 +152,20 @@ local key2App = {
     -- e = "Code", -- e for editor
     f = "Finder",
     -- g used --center babe
-    -- h = '',
+		h = 'Hyper',
     -- i
     -- j = "Spotify",
     -- k = "",
     -- l = 'Dictionary',
-    m = "Spotify", -- m for music
+		m = "Mail",
     -- n = 'NetNewsWires',
     -- o used --max babe
     -- p = "skim",
 		q = "QQ",
-		r = "Safari", -- b for safari
 		-- r = 'Reminders',
-    s = 'System Preferences',
-    t = "iTerm2", -- t for term
+    -- s = 'System Preferences',
+		s = "Safari", -- b for safari
+    -- t = "", -- t for term
     -- u
     -- v = 'Dictionary',
     -- w = 'TaskPaper',
