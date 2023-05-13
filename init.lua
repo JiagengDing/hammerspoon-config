@@ -1,7 +1,7 @@
 local application = require "hs.application"
 local window = require "hs.window"
 local hotkey = require "hs.hotkey"
-local alert = require "hs.alert"
+-- local alert = require "hs.alert"
 local grid = require "hs.grid"
 local hints = require "hs.hints"
 local applescript = require "hs.applescript"
@@ -13,7 +13,7 @@ local hyper = {"ctrl", "alt", "cmd", "shift"}
 require("keyboard") -- Load Hammerspoon bits from https://github.com/jasonrudolph/keyboard
 require("pomo")
 require("slowq")
-require("auto_input")
+-- require("auto_input")
 require("reload")
 require("vim-binding")
 
